@@ -1,5 +1,5 @@
 {
-  "name": "ember-block-params-pseudo-polyfill",
+  "name": "ember-block-params-polyfill",
   "dependencies": {
     "handlebars": "~1.3.0",
     "ember": "1.8.1",

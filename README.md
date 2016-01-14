@@ -1,4 +1,4 @@
-# Ember-block-params-pseudo-polyfill
+# ember-block-params-polyfill
 
 This README outlines the details of collaborating on this Ember addon.
 

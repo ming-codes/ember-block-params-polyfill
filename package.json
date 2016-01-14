@@ -1,5 +1,5 @@
 {
-  "name": "ember-block-params-pseudo-polyfill",
+  "name": "ember-block-params-polyfill",
   "version": "0.0.0",
   "description": "The default blueprint for ember-cli addons.",
   "directories": {

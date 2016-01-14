@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'ember-block-params-pseudo-polyfill'
+  name: 'ember-block-params-polyfill'
 };
