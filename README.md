@@ -1,26 +1,36 @@
 # ember-block-params-polyfill
 
-This README outlines the details of collaborating on this Ember addon.
+This Ember CLI Addon polyfills the block param feature first introduced in Ember 1.10.
 
-## Installation
+## How to use
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+It's pretty straight forward for component templates, just go ahead and pass in arguments
+to your yield helper.
 
-## Running
+```hbs
+{{yield arg1 arg2}}
+```
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+However, when you're using the yielded block param in normal templates, the params will be
+injected into context.
 
-## Running Tests
+```hbs
+{{#test-block-param-component up=0}}{{! as |down|}}
+  Yield before scope: <span class="mid-scope">{{down}}</span> (1)
+  {{#test-block-param-component up=down}}{{! as |down|}}
+    Yield <span class="inner-scope">{{down}}</span> (2)
 
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+    From controller scope: <span class="inner-scope-ctrl">{{controllerValue}}</span>
+  {{/test-block-param-component}}
+  Yield after scope: <span class="mid-scope">{{down}}</span> (1)
+{{/test-block-param-component}}
+```
 
-## Building
+It's recommended to add a comment at the end to indicate there is an injected property.
+Furthermore, this aids in upgrading where you can find and replace all instances of `}}{{!`
 
-* `ember build`
+## Limitations
 
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+Normal templates does not have the freedom to choose block param names.
+
+Currently only tested under 1.8.1
