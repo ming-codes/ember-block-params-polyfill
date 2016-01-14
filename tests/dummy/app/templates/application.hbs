@@ -11,3 +11,10 @@
   {{/test-block-param-component}}
   Yield after scope: <span class="mid-scope">{{down}}</span> (1)
 {{/test-block-param-component}}
+
+{{#test-normal-component}}
+  Normal Yield 1
+  {{#test-normal-component}}
+    Normal Yield 2
+  {{/test-normal-component}}
+{{/test-normal-component}}
