@@ -1,5 +1,7 @@
 import Ember from 'ember';
 
+const emberYield = Ember.__loader.require('ember-handlebars/helpers/yield').default;
+
 //Ember.assert('This version of Ember has yield forward. There is no need to use this polyfill', !hasYieldForward);
 
 const handlebarsViewHelper = Ember.Handlebars.makeViewHelper(Ember.View.extend({
@@ -46,6 +48,10 @@ const handlebarsViewHelper = Ember.Handlebars.makeViewHelper(Ember.View.extend({
 
 export default function (...args) {
   let options = args.pop();
+
+  if (arguments.length === 1) {
+    return emberYield.apply(this, arguments);
+  }
 
   options.hash.yieldProperties = args;
 
