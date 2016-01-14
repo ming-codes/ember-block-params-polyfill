@@ -1,3 +1,13 @@
 <h2 id="title">Welcome to Ember</h2>
 
-{{outlet}}
+<span class="outer-scope">{{controllerValue}}</span>
+
+{{#test-block-param-component up=0}}{{! as |down|}}
+  Yield before scope: <span class="mid-scope">{{down}}</span> (1)
+  {{#test-block-param-component up=down}}{{! as |down|}}
+    Yield <span class="inner-scope">{{down}}</span> (2)
+
+    From controller scope: <span class="inner-scope-ctrl">{{controllerValue}}</span>
+  {{/test-block-param-component}}
+  Yield after scope: <span class="mid-scope">{{down}}</span> (1)
+{{/test-block-param-component}}
