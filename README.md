@@ -1,5 +1,8 @@
 # ember-block-params-polyfill
 
+[![Build Status](https://travis-ci.org/ming-codes/ember-block-params-polyfill.svg?branch=master)](https://travis-ci.org/ming-codes/ember-block-params-polyfill)
+[![npm version](https://badge.fury.io/js/ember-block-params-polyfill.svg)](http://badge.fury.io/js/ember-block-params-polyfill)
+
 This Ember CLI Addon polyfills the block param feature first introduced in Ember 1.10.
 
 ## How to use
