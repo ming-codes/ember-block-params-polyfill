@@ -1,5 +1,7 @@
 # ember-block-params-polyfill
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ming-codes/ember-block-params-polyfill.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/ming-codes/ember-block-params-polyfill.svg?branch=master)](https://travis-ci.org/ming-codes/ember-block-params-polyfill)
 [![npm version](https://badge.fury.io/js/ember-block-params-polyfill.svg)](http://badge.fury.io/js/ember-block-params-polyfill)
 
